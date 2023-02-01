@@ -23,7 +23,7 @@ interface ProfileProps {
   bio: string
   company: string
   followers: string
-  url: string
+  html_url: string
 }
 
 const searchFormSchema = z.object({
@@ -61,7 +61,7 @@ export function Blog() {
         <div>
           <header>
             <strong>{profile?.name}</strong>
-            <a href={profile?.url} target="_blank" rel="noreferrer">
+            <a href={profile?.html_url} target="_blank" rel="noreferrer">
               Github
               <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
             </a>

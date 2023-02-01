@@ -7,6 +7,11 @@ interface PostProps {
   number: number
   body: string
   created_at: Date
+  comments: number
+  html_url: string
+  user: {
+    login: string
+  }
 }
 
 interface PostContextProps {
@@ -31,7 +36,6 @@ export function PostContextProvider({ children }: PostContextProviderProps) {
           : `repo:daniel-koti/github-blog`,
       },
     })
-    console.log(response.data.items)
     setPosts(response.data.items)
   }
 
